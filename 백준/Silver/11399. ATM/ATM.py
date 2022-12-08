@@ -1,10 +1,12 @@
-pers = int(input())
-time = list(map(int, input().split()))
-res = 0
-time.sort()
+import sys
 
-for i in range(pers):
-    res += time[i]*pers
-    pers -=1
+n = int(sys.stdin.readline())
+p_l = list(map(int, sys.stdin.readline().split()))
 
-print(res)
+p_l.sort()
+s = 0
+
+for i in range(n):
+    s += p_l[i] * (n-i)
+
+print(s)
