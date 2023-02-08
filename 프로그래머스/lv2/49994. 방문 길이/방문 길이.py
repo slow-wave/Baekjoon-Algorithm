@@ -1,16 +1,9 @@
 def solution(dirs):
     xy = [0,0]
     move = []
-    for d in dirs:
-        if d == 'U':
-            dist = [0,1]
-        elif d == 'D':
-            dist = [0,-1]
-        elif d == 'L':
-            dist = [-1,0]
-        elif d == 'R':
-            dist = [1,0]
-        
+    info = {'U':[0,1],'D':[0,-1],'L':[-1,0],'R':[1,0]}
+    for d in dirs: 
+        dist = info[d]
         x_m = xy[0] + dist[0]
         y_m = xy[1] + dist[1]
         
